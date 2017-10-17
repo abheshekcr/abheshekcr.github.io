@@ -78,6 +78,15 @@ $(document).ready(function(){
         offset:'50%'
     });
 
+    /*mobile nav*/
+    $('.js--nav-icon').click(function(){
+        var nav =$('.js--main-nav');
+
+        nav.slideToggle(200);
+        $('.js--nav-icon i').toggleClass('ion-close-round');
+        $('.js--nav-icon i').toggleClass('ion-navicon-round');
+    });
+
 });
 
 
