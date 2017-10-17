@@ -121,7 +121,7 @@ header{
             transform: translate(-50%,-50%);
 }
 
-.logo,{
+.logo{
     height: 100px;
     width:auto;
     float: left;
@@ -136,9 +136,8 @@ header{
     margin: 5px 0;
 }
 
-.sticky .logo-black{display: block;}
-.sticky .logo{display: none;}
 
+/*Main nav*/
 
 .main-nav{
     float: right;
@@ -146,28 +145,8 @@ header{
     margin-top: 55px;
 }
 
-/*sticky nav*/
 
 
-.main-nav{
-    margin-top: 18px;
-}
-
-
-.sticky{
-    position: fixed;
-    top:0;
-    left: 0;
-    width:100%;
-    background-color:rgba(0, 0, 0, 0.705),rgba(0, 0, 0, 0.705) ;
-    box-shadow: 0 1px 1px rgba(189, 186, 186, 0.842);
-}
-
-.sticky .main-nav li a:link,
-.sticky .main-nav li a:visited{
-    padding: 16px 0;
-    color: rgb(206, 198, 198);
-}
 
 .main-nav li{
     display: inline-block;
@@ -190,6 +169,37 @@ header{
 .main-nav li a:active{
     border-bottom:2px solid #e67e22;
 }
+
+/*sticky nav*/
+
+
+
+.sticky{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    background-color:rgba(255, 255, 255, 0.973) ;
+    box-shadow: 0 1px 1px rgba(189, 186, 186, 0.842);
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0;
+    color: rgb(206, 198, 198);
+}
+
+.sticky .main-nav{
+    margin-top: 18px;
+}
+
+.sticky .logo{display: none;}
+.sticky .logo-black{display: block;}
+
+
+
+
 
 /*------------------------------*/
      /*Headings*/
@@ -645,3 +655,23 @@ footer p{
     margin-top: 20px;
 }
 
+/*ANIMATIONS
+*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3,
+{
+    opacity: 0;
+    animation-duration:1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated,
+{
+    opacity: 1;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
